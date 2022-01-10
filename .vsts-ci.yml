@@ -21,6 +21,18 @@ jobs:
       packageType: 'runtime'
       version: '2.2.0'
 
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.101'
+    displayName: Use .NET Core SDK 3.1.101
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '5.0.402'
+    displayName: Use .NET SDK 5.0.402
+
   - task: nventiveCanaryUpdater@5
     condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/canaries')
     inputs:
@@ -46,18 +58,6 @@ jobs:
     displayName: Use NuGet 5.6.0
     inputs:
       versionSpec: 5.6.0
-
-  - task: UseDotNet@2
-    inputs:
-      packageType: 'sdk'
-      version: '3.1.101'
-    displayName: Use .NET Core SDK 3.1.101
-
-  - task: UseDotNet@2
-    inputs:
-      packageType: 'sdk'
-      version: '5.0.402'
-    displayName: Use .NET SDK 5.0.402
 
   - task: DotNetCoreCLI@2  
     inputs:
@@ -99,6 +99,18 @@ jobs:
       packageType: 'runtime'
       version: '2.2.0'
 
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.101'
+    displayName: Use .NET Core SDK 3.1.101
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '5.0.402'
+    displayName: Use .NET SDK 5.0.402
+
   - task: nventiveCanaryUpdater@5
     condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/canaries')
     inputs:
@@ -112,18 +124,6 @@ jobs:
       packageAuthor: 'nventive'
       summaryFile: '$(Build.ArtifactStagingDirectory)/Canary.md'
       resultFile: '$(Build.ArtifactStagingDirectory)/update_result.json'
-
-  - task: UseDotNet@2
-    inputs:
-      packageType: 'sdk'
-      version: '3.1.101'
-    displayName: Use .NET Core SDK 3.1.101
-
-  - task: UseDotNet@2
-    inputs:
-      packageType: 'sdk'
-      version: '5.0.402'
-    displayName: Use .NET SDK 5.0.402
 
   - bash: |
       cd $(build.sourcesdirectory)/CommunityToolkit.WinUI.SampleApp.Wasm
