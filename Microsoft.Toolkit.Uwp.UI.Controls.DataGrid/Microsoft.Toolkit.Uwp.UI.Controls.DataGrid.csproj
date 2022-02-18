@@ -1,7 +1,7 @@
 <Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFrameworks>uap10.0.17763</TargetFrameworks>
+    <TargetFrameworks>uap10.0.15063</TargetFrameworks>
     <RootNamespace>Microsoft.Toolkit.Uwp.UI.Controls</RootNamespace>
   </PropertyGroup>
 

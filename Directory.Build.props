@@ -92,7 +92,7 @@
 		UWP is not supported for this build, users must reference
 		the official toolkit packages instead.
 		-->
-		<TargetFrameworksOverride Condition="'$(BUILD_REPOSITORY_PROVIDER)'==''">$(TargetFrameworksOverride);uap10.0.17763</TargetFrameworksOverride>
+		<TargetFrameworksOverride Condition="'$(BUILD_REPOSITORY_PROVIDER)'==''">$(TargetFrameworksOverride);uap10.0.15063</TargetFrameworksOverride>
 
 		<!--<TargetFrameworksOverride>netstandard2.0</TargetFrameworksOverride>-->
 	</PropertyGroup>
